@@ -14,4 +14,14 @@ router.get('/', function (req, res, next) {
     });
 });
 
+router.delete('/delete', function (req, res, next) {
+    db.query('DELETE FROM tblgames from tblgames WHERE id=?', req.body.id, function (error, result) {
+        if (error) {
+            console.log('error en el listado');
+            return;
+        }
+        res.render('admin', { title: 'Admin', articulos: result });
+    });
+});
+
 module.exports = router;

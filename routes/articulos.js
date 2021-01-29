@@ -53,7 +53,7 @@ router.post('/alta', function (req, res, next) {
 
 //Listado de videojuego para el usuario
 router.get('/listado', function (req, res, next) {
-  bd.query('select id,description,title,image from tblgames where status=1', function (error, filas) {
+  bd.query('select id,description,recommends,title,image from tblgames where status=1 ORDER BY recommends DESC', function (error, filas) {
     if (error) {
       console.log('error en el listado');
       return;

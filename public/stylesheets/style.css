@@ -210,3 +210,32 @@ header{
   height: 60px;
   color: #fff;
 }
+
+.container-buttons-admin{
+  display: flex;
+
+}
+
+.btn-delete{
+  color: #fff;
+  background-color: #ff0000;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  width: 110px;
+}
+
+.btn-acept{
+  color: #fff;
+  background-color: #046904;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  width: 110px;
+}
