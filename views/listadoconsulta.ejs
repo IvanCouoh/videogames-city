@@ -4,24 +4,22 @@ Precio:{{precio}}</p>
 {{/each}}
 
 <a href="/">Retornar</a> -->
-<link href="/stylesheets/style.css" rel="stylesheet">
 
-<div class="container">
-        <% for(var i=0; i<articulos.length; i++) { %>
-                <div class="wrapper-card">
-                        <img src="<%=articulos[i].image%>" alt='imagen' class="image-card" />
-                        <h1 class="title">
+
+<% for(var i=0; i<articulos.length; i++) { %>
+        <div class="wrapper-card">
+                <img src="<%=articulos[i].image%>" alt="imagen">
+                <h1 class="title">
+                        <%=articulos[i].id%>
+                </h1>
+                <div class="section-recomendation">
+                        <i class="fas fa-heart icon-heart" title="Recomendaciones"></i>
+                        <span class="span-recomendacion" title="Recomendaciones">
                                 <%=articulos[i].title%>
-                        </h1>
-                        <div class="section-recomendation">
-                                <i class="fas fa-heart icon-heart" title="Recomendaciones"></i>
-                                <span class="span-recomendacion" title="Recomendaciones">
-                                        <%=articulos[i].recommends%>
-                                </span>
-                        </div>
-                        <p class="description">
-                                <%=articulos[i].description%>
-                        </p>
+                        </span>
                 </div>
-                <% } %>
-</div>
+                <p class="description">
+                        <%=articulos[i].description%>
+                </p>
+        </div>
+        <% } %>

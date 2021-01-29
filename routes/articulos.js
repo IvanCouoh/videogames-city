@@ -51,9 +51,9 @@ router.post('/alta', function (req, res, next) {
 });
 
 
-//Listado de videojuego para el usuario
+//Listado de registros
 router.get('/listado', function (req, res, next) {
-  bd.query('select id,description,title,image from tblgames where status=1', function (error, filas) {
+  bd.query('select id,description,title,image from tblgames', function (error, filas) {
     if (error) {
       console.log('error en el listado');
       return;
@@ -61,6 +61,7 @@ router.get('/listado', function (req, res, next) {
     res.render('listararticulos', { articulos: filas });
   });
 });
+
 
 //Consulta
 router.get('/consulta', function (req, res, next) {
