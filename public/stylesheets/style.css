@@ -241,6 +241,14 @@ header{
   background-color: #0e0d27;
   height: 60px;
   color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.header-admin-p{
+  font-size: 15pt;
+  margin: 0;
+  margin-left: 50px;
 }
 
 .container-buttons-admin{
