@@ -1,10 +1,10 @@
 var mysql=require('mysql');
 
 var conexion=mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'videogame'
+    host:'bfsjlxhv01mtogsv1lhq-mysql.services.clever-cloud.com',
+    user:'udtjexhtguzaahna',
+    password:'OhpUqiJjZpzP8FMG8lTw',
+    database:'bfsjlxhv01mtogsv1lhq'
 });
 
 conexion.connect(function (error){
