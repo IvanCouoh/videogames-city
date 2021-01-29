@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header-admin">Admin</header>
+    <div class="container">
+        <% for(var i=0; i<articulos.length; i++) { %>
+            <div class="wrapper-card">
+                <img src="<%=articulos[i].image%>" alt='imagen' class="image-card" />
+                <h1 class="title">
+                    <%=articulos[i].title%>
+                </h1>
+                <div class="section-recomendation">
+                    <i class="fas fa-heart icon-heart" title="Recomendaciones"></i>
+                    <span class="span-recomendacion" title="Recomendaciones">
+                        <%=articulos[i].recommends%>
+                    </span>
+                </div>
+                <p class="description">
+                    <%=articulos[i].description%>
+                </p>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>
