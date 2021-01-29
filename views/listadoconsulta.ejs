@@ -1,0 +1,25 @@
+<!-- {{#each articulos}} -->
+<!-- <p>Descripcion:{{descripcion}}<br>
+Precio:{{precio}}</p>
+{{/each}}
+
+<a href="/">Retornar</a> -->
+
+
+<% for(var i=0; i<articulos.length; i++) { %>
+        <div class="wrapper-card">
+                <img src="<%=articulos[i].image%>" alt="imagen">
+                <h1 class="title">
+                        <%=articulos[i].id%>
+                </h1>
+                <div class="section-recomendation">
+                        <i class="fas fa-heart icon-heart" title="Recomendaciones"></i>
+                        <span class="span-recomendacion" title="Recomendaciones">
+                                <%=articulos[i].title%>
+                        </span>
+                </div>
+                <p class="description">
+                        <%=articulos[i].description%>
+                </p>
+        </div>
+        <% } %>

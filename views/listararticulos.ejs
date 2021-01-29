@@ -1,0 +1,38 @@
+<!-- <table border="1">
+  <tr>
+    <td>Codigo</td><td>Descripcion</td><td>Precio</td>
+  </tr>
+{{#each articulos}}
+  <tr>  
+     <td>{{codigo}} </td> <td>{{descripcion}}</td> <td>{{precio}}</td>
+  </tr>   
+{{/each}}
+</table>
+<a href="/">Retornar</a> -->
+
+<%- include Layout/header.ejs %>
+  <form method="post" action="/articulos/consulta">
+    <div class="section-input">
+      <Input type="text" placeholder="Busca tu videojuego" class="input-search" name="title">
+      <i class="fas fa-search icon-search"></i>
+    </div>
+  </form>
+  <div class="container">
+    <% for(var i=0; i<articulos.length; i++) { %>
+      <div class="wrapper-card">
+        <img src="<%=articulos[i].image%>" alt='imagen' class="image-card" />
+        <h1 class="title">
+          <%=articulos[i].title%>
+        </h1>
+        <div class="section-recomendation">
+          <i class="fas fa-heart icon-heart" title="Recomendaciones"></i>
+          <span class="span-recomendacion" title="Recomendaciones">
+            <%=articulos[i].recommends%>
+          </span>
+        </div>
+        <p class="description">
+          <%=articulos[i].description%>
+        </p>
+      </div>
+      <% } %>
+  </div>

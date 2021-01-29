@@ -1,0 +1,25 @@
+<%- include Layout/header.ejs %>
+  <div class="section-input">
+    <Input type="text" placeholder="Busca tu videojuego" class="input-search">
+    <i class="fas fa-search icon-search"></i>
+  </div>
+
+  <div class="container">
+    <% for(var i=0; i<lista.length; i++) { %>
+      <div class="wrapper-card">
+        <img src="<%=lista[i].image%>" alt='imagen' class="image-card" />
+        <h1 class="title">
+          <%=lista[i].title%>
+        </h1>
+        <div class="section-recomendation">
+          <i class="fas fa-heart icon-heart" title="Recomendaciones"></i>
+          <span class="span-recomendacion" title="Recomendaciones">
+            <%=lista[i].recommends%>
+          </span>
+        </div>
+        <p class="description">
+          <%=lista[i].description%>
+        </p>
+      </div>
+      <% } %>
+  </div>

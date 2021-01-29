@@ -1,0 +1,212 @@
+body {
+  padding: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* 
+a {
+  color: #00B7FF;
+} */
+
+
+/* HEADER */
+header{
+  background-color: #320073;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-right: 15px;
+  box-shadow: rgb(57 73 76 / 20%) 0px 4px 4px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoImg{
+  width: 70px;
+  margin: 15px;
+}
+
+.logoLetras{
+  width: 110px;
+  margin: 42px 0px 42px -15px;
+}
+
+.sectionLinks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links{
+  margin: 0 15px;
+  color: #fff;
+  font-size: 14pt;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.links:hover{
+  color: #fccb34;
+}
+
+
+/* SEARCH */
+.section-input{
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 35%;
+  z-index: 110;
+  justify-content: center;
+}
+
+.input-search{
+  margin: 30px 0;
+  padding: 5px 10px;
+  font-size: 12pt;
+  width: 350px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+}
+
+.icon-search{
+  background: #fff;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  height: 40px;
+  width: 30px;
+  padding: 0px 5px;
+}
+
+
+/* CARDS */
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 65px;
+}
+
+.wrapper-card{
+  background-color: #fff;
+  border: none;
+  border-radius: 13px;
+  /* width: 270px; */
+  width: 248px;
+  height: auto;
+  /* height: 312px; */
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.image-card{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.section-recomendation{
+  position: absolute;
+  display: flex;
+  margin: -25px 0 0px 215px;
+}
+
+.span-recomendacion{
+  color: #000;
+  margin: 4px 0 0 3px;
+}
+
+.icon-heart{
+  display: flex;
+  justify-content: flex-end;
+  color: #e43333;
+  font-size: 20px;
+  margin: 3px 3px 0 3px;
+}
+
+.title{
+  margin-bottom: 23px;
+  font-size: 16pt;
+}
+
+
+/* PAGINA DE RECOMENDACIONES - FORMULARIO */
+.container-form{
+  margin-top: 65px;
+}
+
+.form{
+  width: 400px;
+  padding: 15px;
+  margin: auto;
+  height: auto;
+  border: none;
+  border-radius: 13px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title-recommed{
+  text-align: center;
+  font-size: 14pt;
+}
+
+.input{
+  padding: 10px;
+  font-size: 12pt;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 94%;
+  height: 40px;
+  border: 1px solid #dfdfdf;
+  border-radius: 7px;
+  outline: none;
+}
+
+.label{
+  margin-bottom: 7px;
+}
+
+.height{
+  height: 100px;
+}
+
+.form-section-inputs{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.btn-save{
+  background-color: #fff;
+  width: 100%;
+  color: #320073;
+  font-size: 12pt;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #320073;
+  border-radius: 10px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.btn-save:hover{
+  background-color: #320073;
+  color: #fff;
+}
+
+
+/* ADMIN */
+.header-admin{
+  background-color: #0e0d27;
+  height: 60px;
+  color: #fff;
+}
