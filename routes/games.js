@@ -13,7 +13,7 @@ router.get('/creartabla', function (req, res, next) {
   });
   bd.query('create table tblgames (' +
     'id int primary key auto_increment,' +
-    'title varchar(200)' +
+    'title varchar(5000)' +
     'description text,' +
     'image varchar(5000) ' +
     ')', function (error, resultado) {
@@ -51,9 +51,9 @@ router.post('/alta', function (req, res, next) {
 });
 
 
-//Listado de registros
+//Listado de videojuego para el usuario
 router.get('/listado', function (req, res, next) {
-  bd.query('select id,description,title,image from tblgames', function (error, filas) {
+  bd.query('select id,description,recommends,title,image from tblgames where status=1 ORDER BY recommends DESC', function (error, filas) {
     if (error) {
       console.log('error en el listado');
       return;
@@ -61,7 +61,6 @@ router.get('/listado', function (req, res, next) {
     res.render('listararticulos', { articulos: filas });
   });
 });
-
 
 //Consulta
 router.get('/consulta', function (req, res, next) {
@@ -76,7 +75,7 @@ router.post('/consulta', function (req, res, next) {
       return;
     }
     if (filas.length > 0) {
-      res.render('listadoconsulta', { articulos: filas });
+      res.render('listadoconsulta', { games: filas });
     } else {
       // res.render('mensajearticulos', { mensaje: 'No existe el codigo de articulo ingresado' });
       console.log('No existe el codigo de articulo ingresado');

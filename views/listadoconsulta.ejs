@@ -6,21 +6,22 @@ Precio:{{precio}}</p>
 <a href="/">Retornar</a> -->
 <link href="/stylesheets/style.css" rel="stylesheet">
 
+<%- include Layout/header.ejs %>
 <div class="container">
-        <% for(var i=0; i<articulos.length; i++) { %>
+        <% for(var i=0; i<games.length; i++) { %>
                 <div class="wrapper-card">
-                        <img src="<%=articulos[i].image%>" alt='imagen' class="image-card" />
+                        <img src="<%=games[i].image%>" alt='imagen' class="image-card" />
                         <h1 class="title">
-                                <%=articulos[i].title%>
+                                <%=games[i].title%>
                         </h1>
                         <div class="section-recomendation">
                                 <i class="fas fa-heart icon-heart" title="Recomendaciones"></i>
                                 <span class="span-recomendacion" title="Recomendaciones">
-                                        <%=articulos[i].recommends%>
+                                        <%=games[i].recommends%>
                                 </span>
                         </div>
                         <p class="description">
-                                <%=articulos[i].description%>
+                                <%=games[i].description%>
                         </p>
                 </div>
                 <% } %>

@@ -13,15 +13,21 @@ router.get('/', function (req, res, next) {
         res.render('admin', { title: 'Admin', articulos: result });
     });
 });
-
-router.delete('/delete', function (req, res, next) {
-    db.query('DELETE FROM tblgames from tblgames WHERE id=?', req.body.id, function (error, result) {
-        if (error) {
-            console.log('error en el listado');
-            return;
-        }
-        res.render('admin', { title: 'Admin', articulos: result });
-    });
+ 
+router.get('/autorizar/:id', function(req, res, next) {
+  const { id } = req.params;
+  db.query("UPDATE tblgames SET status='1' WHERE id = ?", [id] ,function(err, resultados){
+      res.redirect('/admin');
+  });
 });
+
+
+router.get('/rechazar/:id', function(req, res, next) {
+  const { id } = req.params;
+  db.query("UPDATE tblgames SET status='2' WHERE id = ?", [id] ,function(err, resultados){
+      res.redirect('/admin');
+  });
+});
+
 
 module.exports = router;
