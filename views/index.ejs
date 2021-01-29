@@ -1,5 +1,26 @@
-<a href="/games/alta">alta de articulos</a></p>
-<a href="/games/listado">Listado completo de articulos</a></p>   
-<a href="/games/consulta">Consulta de un articulo por codigo</a></p>
-<a href="/games/modificacion">Modificacion de un articulo</a></p>
-<a href="/games/creartabla">Creacion de una tabla 'articulos' con MySQL</a></p>
+<%- include Layout/header.ejs %>
+  <form method="post" action="/resultado">
+    <div class="section-input">
+      <Input type="text" placeholder="Busca tu videojuego" class="input-search" name="title">
+      <i class="fas fa-search icon-search"></i>
+    </div>
+  </form>
+  <div class="container">
+    <% for(var i=0; i<articulos.length; i++) { %>
+      <div class="wrapper-card">
+        <img src="<%=articulos[i].image%>" alt='imagen' class="image-card" />
+        <h1 class="title">
+          <%=articulos[i].title%>
+        </h1>
+        <div class="section-recomendation">
+          <i class="fas fa-heart icon-heart" title="Recomendaciones"></i>
+          <span class="span-recomendacion" title="Recomendaciones">
+            <%=articulos[i].recommends%>
+          </span>
+        </div>
+        <p class="description">
+          <%=articulos[i].description%>
+        </p>
+      </div>
+      <% } %>
+  </div>

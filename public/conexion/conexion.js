@@ -4,7 +4,7 @@ var conexion=mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'',
-    database:'videogames'
+    database:'videogame'
 });
 
 conexion.connect(function (error){

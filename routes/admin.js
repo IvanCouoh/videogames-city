@@ -21,7 +21,6 @@ router.get('/autorizar/:id', function(req, res, next) {
   });
 });
 
-
 router.get('/rechazar/:id', function(req, res, next) {
   const { id } = req.params;
   db.query("UPDATE tblgames SET status='2' WHERE id = ?", [id] ,function(err, resultados){

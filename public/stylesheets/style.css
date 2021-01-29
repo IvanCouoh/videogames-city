@@ -87,6 +87,38 @@ header{
   padding: 0px 5px;
 }
 
+.container-error-mensaje{
+  height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto{
+  margin-top: -20px;
+  font-size: 14pt;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-search-again{
+  background-color: #fff;
+  width: 200px;
+  color: #320073;
+  font-size: 12pt;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #320073;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-search-again:hover{
+  background-color: #320073;
+  color: #fff;
+}
 
 /* CARDS */
 .container{
@@ -124,7 +156,7 @@ header{
 
 .span-recomendacion{
   color: #000;
-  margin: 4px 0 0 3px;
+  margin: 0 0 0 3px;
 }
 
 .icon-heart{
@@ -213,7 +245,6 @@ header{
 
 .container-buttons-admin{
   display: flex;
-
 }
 
 .btn-delete{
@@ -222,10 +253,20 @@ header{
   height: 35px;
   border: none;
   border-radius: 10px;
-  padding: 10px;
   outline: none;
   cursor: pointer;
   width: 110px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.btn-delete:hover{
+  color: #fff;
 }
 
 .btn-acept{
@@ -234,8 +275,33 @@ header{
   height: 35px;
   border: none;
   border-radius: 10px;
-  padding: 10px;
   outline: none;
   cursor: pointer;
   width: 110px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.btn-acept:hover{
+  color: #fff;
+}
+
+.container-admin-table{
+  margin-top: 35px;
+  width: 100%;
+}
+
+.image-admin{
+  width: 200px;
+  height: 165px;
+  object-fit: contain;
+}
+
+.text-center{
+  text-align: center;
 }
