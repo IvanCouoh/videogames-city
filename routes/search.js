@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
   });
   
   router.post('/', function (req, res, next) {
-    db.query('select description,title,recommends,image from tblgames where title=?', req.body.title, function (error, filas) {
+    db.query('SELECT description,title,recommets,image FROM `tblgames` WHERE title=?', req.body.title, function (error, filas) {
       if (error) {
         console.log('error en la consulta');
         return;
